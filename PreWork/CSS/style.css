@@ -5,8 +5,15 @@
 #headings
 {
 	color:rgb(255, 0, 255);
-	position: relative;
+	text-align: center;
 	left: 550px;
+}
+
+#pagestyle{
+	font-family: cursive;
+	color: blue;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 .paragraphs {
@@ -50,4 +57,8 @@ span {
 
 .hidden{
 	display:none;
+}
+.position{
+	position: static;
+	border: 3px solid #73AD21;
 }
