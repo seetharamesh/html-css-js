@@ -1,0 +1,31 @@
+.container{
+  display:flex;
+  flex-flow:row;
+}
+
+#nav1{
+ width: 100px;
+  height: 100px;
+  background-color: red;
+  position:relative;
+ animation: mytest 3s normal forwards
+
+}
+#nav2{
+ width: 100px;
+  height: 100px;
+  background-color: blue;
+  position:relative;
+  animation: mytest 3s normal forwards;
+}
+#nav3{
+ width: 100px;
+  height: 100px;
+  background-color: pink;
+  position:relative;
+  animation: mytest 3s normal forwards;
+}
+@keyframes mytest{
+  from{left:100px;}
+  to{left:900px;}
+}

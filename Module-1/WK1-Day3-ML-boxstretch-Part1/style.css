@@ -1,0 +1,61 @@
+.div1 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+.div2 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+.div1:hover {
+  transition: width 1s;
+  animation-name: myframe;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.div1:hover ~ .div2 {
+  animation-delay: 1s;
+  transition: width 1s;
+  animation-name: myframe;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.div1:not(:hover) {
+  transition: width 1s;
+  animation-name: resetting;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+
+.div1:not(:hover) ~ .div2 {
+  animation-delay: 1s;
+  transition: width 1s;
+  animation-name: resetting;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes myframe {
+  from {
+    left: 0px;
+    width: 50px;
+  }
+  to {
+    left: 200px;
+    width: 200px;
+  }
+}
+
+@keyframes resetting {
+  from {
+    left: 200px;
+    width: 200px;
+  }
+  to {
+    left: 0px;
+    width: 50px;
+  }
+}
