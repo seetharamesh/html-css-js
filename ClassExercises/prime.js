@@ -1,6 +1,6 @@
 var i = 0;
-while (i < 100) {
-   if(i > 10 && (i%5 == 0 || i%7 == 0)){/*This check is done because multiples of 5 and 7 are to be skipped*/
+while (i < 200) {
+   if(i > 10 && (i%5 == 0 || i%7 == 0)){/*This check is done because multiples of 5 and 7 are to be skipped for i > 10*/
       i++;
       continue;
       }
