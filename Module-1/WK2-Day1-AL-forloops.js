@@ -25,8 +25,11 @@ for(let i = 0; i <= 10; i++){
 //“even” for all even numbers, and “odd” for all odd numbers.
 // Treat 2 as an even number and 1 & 3 as odd
 console.log("\n");
-for(let i = 1; i <= 20; i++){
-  if(i == 1 || i%3 == 0)console.log(i + " is odd;"+"\n");
-  else if(i == 2 || i%2 == 0) console.log(i + " is even;" + "\n");
-  else console.log(i + " is prime;" + "\n")
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 == 0)
+    console.log(i + " is even;");
+  else if (i == 1 || i % 3 == 0)
+    console.log(i + " is odd;");
+  else
+    console.log(i + " is prime;")
 }
