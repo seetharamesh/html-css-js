@@ -1,3 +1,6 @@
+//converting BonusQuestonOnLogical.js to use a function. Nando went to the vending machine to buy himself a cookie.
+//The cookie costs $2. He paid with a $20 bill,the vending machine paid him back in quarters.  
+
 
 var quarters = 0;
 
