@@ -4,12 +4,11 @@
 
 var quarters = 0;
 
-function returnChange(originalCost, moneyPaid) {
-  if (moneyPaid > originalCost) {
+function returnChange(originalCost, moneyPaid) { //original cost is $2 and he paid using $20 bill
+  if (moneyPaid > originalCost) { //Adding this check to see if Nando needs change back
     let moneyBack = moneyPaid - originalCost;
     quarters = (moneyBack * 100) / 25;
-  }
-  else {
+  } else {
     //moneyPaid is lesser than original cost
     console.log("Money paid to buy the item is lesser than the item cost!");
   }
