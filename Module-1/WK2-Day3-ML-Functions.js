@@ -60,3 +60,5 @@ let vowelCount = x => {
 var numberOfVowels = vowelCount("BeaUtiFUl");
 if (numberOfVowels == 0) console.log("The input string length is greater than 10. Please enter a string whose length is less than equal to 10");
 else console.log("Number of Vowels in the given string is: " + numberOfVowels);
+
+console.log("---------------------------------------------");
