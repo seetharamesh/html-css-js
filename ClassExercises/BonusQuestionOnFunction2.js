@@ -1,7 +1,6 @@
 // Nando went to Uniqio and bought himeself a nice plaid shirt for $27.83. He paid with $100 as he had no change.
 // The cashier paid returned his change in large denominations since they needed change for other customers.
 // Write a loop that prints out how many bills he received in return in as large denominations as possible.
-
 var bills = "";
 var moneyBack = 0;
 
