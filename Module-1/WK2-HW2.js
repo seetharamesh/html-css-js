@@ -20,8 +20,8 @@ var arr = [-1, 1, -3, 4, 5, 2];
 var sumResult = sumArray(arr);
 var productResult = multiplyArray(arr);
 console.log("Sum of the given array: " + sumResult);
-console.log("Sum of the given array: " + productResult);
-console.log("****************");
+console.log("Product of the given array: " + productResult);
+console.log("*****************************");
 
 
 
