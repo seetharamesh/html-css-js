@@ -11,8 +11,12 @@ function returnBills(originalCost, moneyPaid) {
     console.log("MoneyBack should be:$ " + moneyBack);
     //write logic to return bills.
     while (moneyBack >= 1) {
-      if (moneyBack < 100 && moneyBack >= 50) { //writing logic for $100 only
-        bills = bills.concat("50");
+      if(moneyBack >= 100){
+        bills = bills.concat("100 ");
+        moneyBack = moneyBack - 100;
+      }
+      if (moneyBack < 100 && moneyBack >= 50) {
+        bills = bills.concat(" ,50");
         //console.log("bill 1:" + bills);
         moneyBack = moneyBack - 50;
         //console.log("remaining money:" + moneyBack);
@@ -51,9 +55,9 @@ function returnBills(originalCost, moneyPaid) {
   return bills;
 } //function closing
 
-var listedPrice = parseFloat(12);
+var listedPrice = parseFloat(100);
 console.log("Listed Price is:$ " + listedPrice);
-var paidWith = 100;
+var paidWith = 300;
 console.log("Gave the cashier:$ " + paidWith);
 bills = returnBills(listedPrice, paidWith); // call the function
 console.log("Bills returned are:$ " + bills);
