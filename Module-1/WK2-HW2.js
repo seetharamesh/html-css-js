@@ -80,7 +80,8 @@ console.log("*********************");
 let filterLongWords = (arrayOfWords, num) => {
   var lengthOfArray = arrayOfWords.length;
   var j = 0;
-  var newArray = new Array(); //creating an Array to store the elements that are > num length.
+  //var newArray = new Array(); //creating an Array to store the elements that are > num length.
+  var newArray = []; //this is another way of creating an array
   for (var i = 0; i < lengthOfArray; i++) {
     if (arrayOfWords[i].length > num) {
       newArray[j] = arrayOfWords[i]; //using j so that position of new array begins at 0
@@ -95,3 +96,20 @@ var i = 4;
 var newArray = filterLongWords(arr, i);
 console.log(`New Array of Words that are greater than ${i} characters long is: ${newArray}`); //new way of printing using ``
 console.log("*********************");
+
+// Bonus #1
+// Add a method reverseString (from question 6) to the object String
+// so that it is possible to call: "Per Scholas".reverseString().
+let reverseString = (str) => {
+  //1. step 1 use split("") on str to split the characters and return a new array.
+  var splitArray = str.split("");
+  //2. Now reverse this new array "splitArray" using reverse();
+  var reverseArray = splitArray.reverse();
+  //3. Now use join() to join the individual characters in "reverseArray" to make the whole string and output the result
+  console.log("The original string " + str + " is reversed to " + reverseArray.join(""));
+}
+
+var strArg = new String();
+strArg = "Per Scholas";
+reverseString(strArg);
+console.log("**********************");
