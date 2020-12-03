@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <img id='img' alt="img">
+
+  <button onclick="changeImage(1)">forward</button>
+  <button onclick="changeImage(-1)">back</button>
+
+</body>
+
+<script type="text/javascript">
+  var index = 0;
+  var index2 = 4;
+
+  function changeImage(x) {
+    var images = ["img/1.png", "img/2.png", "img/3.png", "img/4.png", "img/5.png"];//array of images
+    //x is positive...Forward Movement
+    if (x == 1) {
+      if (index >= 5) {
+        document.getElementById('img').src = images[0]; //reset image to first image if index >= 5 as we are incrementing at the end
+        index = 0;//reset index to 0 too
+      } else {
+        document.getElementById('img').src = images[index]; //display image in order
+      }
+      index2 = index-1;//when we navigate from forward to backward in the middle of the show..eg., forwarded to 3 and clicked backward, then backward should start from 3-1 = 2
+      index++;//increment index
+    }
+    //x is negative...Backward Movement
+    if (x == -1) {
+      if (index2 < 0) {
+        document.getElementById('img').src = images[4];//start with last image
+        index2 = 4;//reset index to 4 too
+      } else {
+        document.getElementById('img').src = images[index2];//display the image
+      }
+      index = index2+1; //when we navigate from backward to forward in the middle of the show and inorder to continue in correct starting order
+      index2--;//decrement the index
+    }
+  }
+</script>
+
+</html>
