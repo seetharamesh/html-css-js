@@ -1,0 +1,49 @@
+
+body{
+background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/455884/cat.jpg');
+}
+.container{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.ovals {
+  border: 1px solid ;
+  border-radius: 50%;
+  height: 20em;
+  width: 27em;
+  background-color: green;
+  opacity:1.0;
+}
+
+.ovals:hover {
+  opacity: 0;
+}
+
+
+
+/*
+This is another way that works but not very efficient as it's not generalized
+
+body{
+background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/455884/cat.jpg');
+}
+.container{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+#item1, #item2, #item3, #item4,#item5,#item6,#item7,#item8,#item9 {
+  border: 1px solid ;
+  border-radius: 50%;
+  height: 20em;
+  width: 27em;
+  background-color: green;
+  opacity:1.0;
+}
+
+#item1:hover, #item2:hover,#item3:hover,#item4:hover,#item5:hover,#item6:hover,#item7:hover,#item8:hover,#item9:hover {
+  opacity: 0;
+} */
