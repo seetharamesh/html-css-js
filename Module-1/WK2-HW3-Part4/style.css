@@ -1,0 +1,55 @@
+.red {
+  height: 100px;
+  width: 100px;
+  font-size:20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;/*This will set the timer to center*/
+  background-color:red;
+  border-radius: 50%;
+  box-shadow: 0.175em 0.175em 0 0 grey;
+}
+
+.blue {
+  height: 100px;
+  width: 100px;
+  font-size:20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;/*This will set the timer to center*/
+  background-color: #0781D4;
+  border-radius: 50%;
+  box-shadow: 0.175em 0.175em 0 0 grey;
+}
+
+#txtTempo {
+  line-height: 90px;
+  font: 15px Verdana;
+  background-color:#0781D4;
+  text-align: center;
+}
+
+
+
+
+
+
+
+ /* .timer{
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: #0781D4;
+  text-align: center;
+  line-height: 190px;
+  font: 50px Verdana;
+  line-height: 190px;
+  box-shadow: 0.2752m 0.275em 0 0 grey;
+  position:absolute;
+}
+.timer label {
+  line-height: 190px;
+  font: 50px Verdana;
+} */
