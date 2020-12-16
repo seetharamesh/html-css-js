@@ -28,7 +28,7 @@ const obj2 = new Animal('cheetah',15,'yellow',4,'fastrunner');
 // Create a class name User.
 // This class with have firstName, lastName, department attributes
 // Create three objects for this class ??????????????????????
-class User
+class User{
 constructor(firstName,lastName,department){
   this.firstName = firstName;
   this.lastName = lastName;
@@ -38,7 +38,6 @@ constructor(firstName,lastName,department){
 changeDepartment(){
   console.log("Your department is changed");
 }
-
 }
 // Create three instances of this class
 // Change department for two of the instances
