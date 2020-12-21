@@ -1,0 +1,69 @@
+#learn-bridge {
+    position: absolute;
+    z-index: -1; /*setting the z-index lower the z-index of modal will place modal infront*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ body {
+	background-image: url("lets-play-bridge.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+ #modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+  /*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+  display: none;
+/*Set this to `none` so that the modal does not show initially on page load.*/
+
+
+}
+ #modal-textbox {
+	background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+	margin: 150px auto;
+  /*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	/*This will give the box some depth.*/
+  /*Added this for close button -- Give #modal-textbox some room to breath with some padding and a change in line height:*/
+  padding: 2%;
+  line-height: 120%;
+/*Update the font of the #modal-textbox to 'Arial'.*/
+  font-family: Arial;
+}
+/*Adjust the close button location. Select just the footer and let's move the close button to the right: text-align: right;*/
+#modal-footer {
+	text-align: right;
+}
+
+/*Give the heading some room to breath. We can reference the <h1> tag because it is the only one in the html at this time.*/
+h1 {
+	padding-bottom: 15px;
+}
+
+.modal-buttons {
+	padding: 14px 18px;
+	background-color: #677996;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	color: white;
+	font-family: 'Arial';
+	cursor: pointer;
+}
+
+/* Exercise End */
