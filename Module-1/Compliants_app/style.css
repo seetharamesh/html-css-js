@@ -1,5 +1,5 @@
 .button {
-  background-color: #4CAF50; /* Green */
+  /*background-color: #4CAF50;*/
   border: none;
   color: white;
   padding: 15px 32px;
@@ -17,6 +17,12 @@ table {
   width: 100%;
 }
 
+caption{
+  font-weight: bold;
+  font-size: 24px;
+  background-color:rgb(204, 158, 148);
+}
+
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
@@ -24,10 +30,14 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color:rgb(204, 158, 148);/*dddddd*/
 }
 
-.modal-buttons {
+tr:nth-child(odd){
+  background-color:rgb(105, 61, 64);
+}
+
+/* .modal-buttons {
 	padding: 14px 18px;
 	background-color: #677996;
 	border: none;
@@ -36,4 +46,4 @@ tr:nth-child(even) {
 	color: white;
 	font-family: 'Arial';
 	cursor: pointer;
-}
+} */

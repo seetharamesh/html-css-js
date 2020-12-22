@@ -1,6 +1,8 @@
+
 $(() => {
-//removed form from below
+
   $("button").click(function (ev) {
+    $("tbody#callData").empty();   //call empty function before beginning so page can be loaded with new burrough choice every time and not mix it up if the program is run again and again without browser refresh.
         ev.preventDefault()
         var userInput = $('input[type="text"]').val();//store user textbox value to userInput
         //If user didn't enter anything in the text box then keep the default as 10
@@ -25,6 +27,7 @@ $(() => {
                 url:`https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=`+userBoroughChoice+`&agency=NYPD`
             }).then(
                 (data) => {
+                            console.log("received data:");
                             for(var i = 0; i<userInput; i++){
                               var rowNum = "res"+i;//generating id dynamically so it can be used for <div...container that has description> below.
                               var buttonNum = "button"+i;//generating id dynamically so it can be used for <div...container that has button>
@@ -56,5 +59,4 @@ showDesc = function(rowNum){
   $("#"+temp).show();
   $("#button" + rowNum).hide();
 }
-
   })//document end
