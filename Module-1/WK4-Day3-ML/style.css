@@ -1,0 +1,60 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+/*Added the 2 column styles from W3 schools*/
+#column1,#column2 {
+   float: left;
+   width: 50%;
+   }
+
+   .row:after {
+   content: "";
+   display: table;
+   clear: both;
+   }
+/*End of 2 column styling*/
+
+#submit-btn {
+  background-color: rgb(157, 13, 13);
+  border: none;
+  color: white;
+  padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  /* The below 4 styles are added for centering the button (transform is the key)*/
+  position:absolute;
+  top: 15%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+
+#input-box{
+  padding: 5px 22px;
+  /* The below 4 styles are added for centering the box (transform is the key)*/
+  position:absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+h1{
+text-align: center;
+}
+
+/* table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+} */
