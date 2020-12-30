@@ -1,3 +1,51 @@
+// Write a function maxOfTwoNumbers that takes two numbers as arguments and returns the largest of them.
+// Use the if-then-else construct available in Javascript.
+// Do some googling to figure this out if you forget how conditionals work.
+console.log("---------Max of Two numbers-----------");
+let maxOfTwoNumbers = (x, y) => {
+  if (x > y) return x;
+  else return y;
+}
+var num1 = 65,
+  num2 = 100;
+var result = maxOfTwoNumbers(num1, num2);
+console.log(`Max of ${num1} and ${num2} is ${result}`);
+
+
+// Write a function maxOfThree that takes three numbers as arguments and returns the largest of them.
+console.log("\n---------Max of three numbers-----------");
+let maxOfThreeNumbers = (x, y, z) => {
+  if (x > y && x > z) return x;
+  else if (y > x && y > z) return y;
+  else return z;
+}
+var num1 = 165,
+  num2 = 260,
+  num3 = 790;
+var result = maxOfThreeNumbers(num1, num2, num3);
+console.log(`Max of ${num1} , ${num2} , ${num3} is ${result}`);
+
+// Write a function isCharacterAVowel that takes a character (i.e. a string of length 1) and
+// returns true if it is a vowel, false otherwise
+console.log("\n---------Output true if it's a vowel and false otherwise-----------");
+//Note: I am practicing using Arrow functions.Since it's a single parameter, no need of parenthesis around it.
+let isCharacterAVowel = x => {
+  if (x == 'a' || x == "e" || x == 'i' || x == 'o' || x == 'u') return true;
+  else return false;
+}
+var str = 'z';
+var result = isCharacterAVowel(str);
+console.log(result);
+
+// Write a function charCount that takes a string and returns the length of the string.
+console.log("\n---------Length of the given String-----------");
+//Note: Here i tried using arrow functions. if we are passing one argument, no need of brackets in function
+// and no need of keyword "return". Implicit returns are fine.
+const charCount = x => x.length;
+
+var result = charCount('seetha ramesh');
+console.log("String length is " + result);
+
 // Define a function sumArray and a function multiplyArray that sums and multiplies (respectively)
 // all the numbers in an array of numbers. For example, sumArray([1,2,3,4]) should return 10,
 // and multiplyArray([1,2,3,4]) should return 24.
