@@ -1,6 +1,6 @@
 
 $(() => {
-
+  //button click event listener and event handler
   $("button").click(function (ev) {
     $("tbody#callData").empty();   //call empty function before beginning so page can be loaded with new burrough choice every time and not mix it up if the program is run again and again without browser refresh.
         ev.preventDefault()
@@ -8,6 +8,9 @@ $(() => {
         //If user didn't enter anything in the text box then keep the default as 10
         if (userInput === "")
           userInput = 10;
+        //user input for number of data retrieved and agency(default NYPD) are stored in different variables for easier querying in ajax call
+        const userLimit = '&$limit='+userInput;
+        const agency = "&$where=agency=" + "'NYPD'";
 
         var userBoroughChoice;//this variable stores value of user button selection(from 5 buttons)
         if ($(this).attr("value") == "MANHATTAN") //user button value check
@@ -24,7 +27,8 @@ $(() => {
         //The result of ajax is returned as an object and stored in promise variable
         const promise =
         $.ajax({
-                url:`https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=`+userBoroughChoice+`&agency=NYPD`
+              //  url:`https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=`+userBoroughChoice+`&agency=NYPD`
+              url:`https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=`+userBoroughChoice + userLimit + agency
             }).then(
                 (data) => {
                             console.log("received data:");
@@ -33,6 +37,7 @@ $(() => {
                               var buttonNum = "button"+i;//generating id dynamically so it can be used for <div...container that has button>
                               console.log("i value is:" + i);
                               //tbody and its id should be together or it won't display data
+                              //appending the data to the table in rows
                               $('tbody#callData').append(
                                                           '<tr><td>'
                                                           + data[i].unique_key
