@@ -16,3 +16,4 @@ function circle(shapeName){
 circle.prototype = Object.create(shape.prototype);//this makes the circle object inherit properties of abstract class shape
 var c = new circle(" ccccccc");
 console.log(c.draw());
+//end
